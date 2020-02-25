@@ -925,3 +925,12 @@ define Device/zorlik_zl5900v2
   DEVICE_PACKAGES := kmod-usb-core kmod-usb-ohci kmod-usb2 kmod-ledtrig-netdev
 endef
 TARGET_DEVICES += zorlik_zl5900v2
+
+define Device/fwtap
+  DTS := FWTAP
+  BLOCKSIZE := 64k
+  IMAGE_SIZE := $(ralink_default_fw_size_4M)
+  DEVICE_TITLE := 3JTech FWT AP MD910
+  DEVICE_PACKAGES := kmod-usb-core kmod-usb2 kmod-usb-ledtrig-usbport kmod-ledtrig-netdev
+endef
+TARGET_DEVICES += fwtap
